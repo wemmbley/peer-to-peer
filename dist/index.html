@@ -1,0 +1,25 @@
+<html>
+<body>
+<style>
+    .error {
+        color: darkred;
+    }
+    video {
+        position: relative;
+        background: cadetblue;
+    }
+    video:after {
+        content: 'Video Device';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        color: black;
+    }
+</style>
+<video class="user"></video>
+<video class="remote-user"></video>
+<p class="error"></p>
+<script src="bundle.js"></script>
+</body>
+</html>

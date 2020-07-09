@@ -7,18 +7,18 @@
     video {
         position: relative;
         background: cadetblue;
-    }
-    video:after {
-        content: 'Video Device';
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 16px;
-        color: black;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
     }
 </style>
-<video class="user"></video>
-<video class="remote-user"></video>
+
+<video class="user">Your browser does not support the video tag.</video>
+
+<div class="videos">
+
+</div>
+
 <p class="error"></p>
 <script src="bundle.js"></script>
 </body>

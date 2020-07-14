@@ -1,25 +1,37 @@
 <html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+</head>
 <body>
-<style>
-    .error {
-        color: darkred;
-    }
-    video {
-        position: relative;
-        background: cadetblue;
-        border-radius: 100px;
-        width: 200px;
-        height: 200px;
-    }
-</style>
+    <style>
+        .error {
+            color: darkred;
+        }
+        video {
+            position: relative;
+            background: cadetblue;
+        }
+        video:after {
+            content: 'Video Device';
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            color: black;
+        }
+    </style>
 
-<video class="user">Your browser does not support the video tag.</video>
+    <video class="local-video" autoplay muted></video>
+    <video class="remote-user" autoplay></video>
 
-<div class="videos">
+    <p class="error"></p><br>
+    <label>Current ID:</label>
+    <input class="current-id" type="text"><br>
+    <label>Enter connection ID:</label>
+    <input class="connection-id" type="text">
+    <button class="btn-connect">Connect!</button>
 
-</div>
-
-<p class="error"></p>
-<script src="bundle.js"></script>
+    <script src="bundle.js"></script>
 </body>
 </html>

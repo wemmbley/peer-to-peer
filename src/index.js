@@ -56,8 +56,25 @@ getVideo({
                     this.video.height.exact + ' px is not supported by your device.');
                 break;
             }
-            default: {
-                console.log(error.name);
+        })
+        .catch((error) => {
+            switch(error.name) {
+                case 'NotFoundError': {
+                    sendError('* Sorry, but you dont have any video devices');
+                    break;
+                }
+                case 'NotAllowedError': {
+                    sendError('* Permissions have not been granted to use your camera');
+                    break;
+                }
+                case 'ConstraintNotSatisfiedError': {
+                    sendError('The resolution ' + this.video.width.exact + 'x' +
+                        this.video.height.exact + ' px is not supported by your device.');
+                    break;
+                }
+                default: {
+                    console.log(error.name);
+                }
             }
         }
     }
